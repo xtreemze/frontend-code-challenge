@@ -14,7 +14,7 @@ let fetchedListings = fetch("https://api.mcmakler.de/v1/advertisements")
 
   class card {
     constructor(arguments) {
-this.sourceImage = arguments.advertisementAssets[0].advertisementThumbnails.inventory_m.url;
+this.sourceImage = arguments.advertisementAssets.advertisementThumbnails.inventory_m.url;
 this.cardTitle = arguments.title;
 this.priceRent = arguments.advertisementPrice.baseRent;
 this.priceSell = arguments.advertisementPrice.sellprice;
