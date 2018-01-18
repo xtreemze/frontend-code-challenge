@@ -3,7 +3,7 @@ window.addEventListener("load", function() {});
 let listings = document.getElementById("listings");
 let resultJson;
 
-let fetchedListings = fetch("https://api.mcmakler.de/v1/advertisements",  {'mode': 'no-cors'})
+let fetchedListings = fetch("https://api.mcmakler.de/v1/advertisements?callback=JSONP_CALLBACK",  {'mode': 'no-cors'})
   .then(function(response) {
     return response.json();
   })
@@ -28,9 +28,6 @@ this.space = arguments.realestateSummary.space;
       <div class="card-image">
         <img src=${this.sourceImage}>
         <span class="card-title">${this.cardTitle}</span>
-        <a class="btn-floating halfway-fab waves-effect waves-light red">
-          <i class="material-icons">add</i>
-        </a>
       </div>
       <div class="card-content">
         ${cardContent}
@@ -54,6 +51,18 @@ listings.innerHTML += this.card;
     }
   }
 
-  for (i = 0; i < 10; i ++){
-    new card(resultJson.data[i]);
-   }
+
+
+  if (resultJson.length < 10){
+    const importCines = function() {
+      const imported = require("./advertisements.json");
+      imported.data.forEach(function(item) {
+        new card(item);
+      });
+    };
+  } else {
+    for (i = 0; i < 10; i ++){
+      new card(resultJson.data[i]);
+     }
+  }
+
