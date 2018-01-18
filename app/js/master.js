@@ -19,6 +19,9 @@ this.cardTitle = arguments.title;
 this.priceRent = arguments.advertisementPrice.baseRent;
 this.priceSell = arguments.advertisementPrice.sellprice;
 this.furnished = arguments.hasFurniture;
+this.rooms = arguments.realestateSummary.numberOfRooms;
+this.address = arguments.realestateSummary.address;
+this.space = arguments.realestateSummary.space;
       this.cardHtml = `<div class="row">
   <div class="col s12 m6">
     <div class="card">
@@ -33,13 +36,21 @@ this.furnished = arguments.hasFurniture;
         ${cardContent}
       </div>
       <div class="price">
-${this.priceRent}
-${this.priceSell}
+        ${this.priceRent} ${this.priceSell}
+      </div>
+
+      <div class="rooms">
+        ${this.rooms}
+      </div>
+
+      <div class="space">
+        ${this.space}
       </div>
     </div>
   </div>
 </div>
 `
+listings.innerHTML += this.card;
     }
   }
 
