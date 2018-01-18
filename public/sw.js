@@ -1,13 +1,11 @@
 var __wpo = {
   "assets": {
     "main": [
-      "./img/MaterialIcons-Regular.eot?e79bfd88537def476913f3ed52f4f4b3",
-      "./img/MaterialIcons-Regular.ttf?a37b0c01c0baf1888ca812cc0508f6e2",
-      "./js/entry.js?4396bd3ae85292da7465",
-      "./js/vendor.js?d6cf8260ebba9a428b68",
-      "./js/manifest.js?0ebfc4779bf13c2ba302",
-      "./css/vendor.css?d6cf8260ebba9a428b68",
-      "./css/entry.css?4396bd3ae85292da7465",
+      "./js/entry.js?38c7420dc3fe46b9ea49",
+      "./js/vendor.js?7d7f9bf203e473b73a34",
+      "./js/manifest.js?4cfaaaef7e8118c08018",
+      "./css/vendor.css?7d7f9bf203e473b73a34",
+      "./css/entry.css?38c7420dc3fe46b9ea49",
       "./"
     ],
     "additional": [],
@@ -15,18 +13,16 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "26fb8cecb5512223277b4d290a24492a0f09ede1": "./img/MaterialIcons-Regular.eot?e79bfd88537def476913f3ed52f4f4b3",
-    "fc05de31234e0090f7ddc28ce1b23af4026cb1da": "./img/MaterialIcons-Regular.ttf?a37b0c01c0baf1888ca812cc0508f6e2",
-    "c23acce2f2495d01c8a956ec49b5bcda7d4e1c2f": "./js/entry.js?4396bd3ae85292da7465",
-    "132944b3082381250b631af16c2446569c1e28d3": "./js/vendor.js?d6cf8260ebba9a428b68",
-    "8813c3c4fadcba1997f9afbd1264266bf43720e4": "./js/manifest.js?0ebfc4779bf13c2ba302",
-    "d9fb46a65239346d6df1e9dfe603fac56d16c09c": "./css/vendor.css?d6cf8260ebba9a428b68",
-    "73313e7023e777802268f77467341052a1bc290d": "./css/entry.css?4396bd3ae85292da7465",
-    "d1095fe838cde2cfc826df86f8f3f3b9e98dbdfe": "./"
+    "2018f2a783a9c068fa53f1c90e0010a919be96e1": "./js/entry.js?38c7420dc3fe46b9ea49",
+    "75d14d3ed75ee5b78a23814359528e9e6de18310": "./js/vendor.js?7d7f9bf203e473b73a34",
+    "8df9aedaf3a86d00402054e0b0b25284505fd552": "./js/manifest.js?4cfaaaef7e8118c08018",
+    "5cc3e42619e5cc9e246a553040fa0cf3ee6c5a62": "./css/vendor.css?7d7f9bf203e473b73a34",
+    "213e711857d30f9cef5548c0b10d9f9939b58ed1": "./css/entry.css?38c7420dc3fe46b9ea49",
+    "16915adcd61f884492c0817bf98e70f622ba92b3": "./"
   },
-  "strategy": "changed",
+  "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2018-1-18 14:57:33",
+  "version": "2018-1-18 15:09:49",
   "name": "webpack-offline",
   "pluginVersion": "4.9.0",
   "relativePaths": true

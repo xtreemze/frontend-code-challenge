@@ -1,15 +1,13 @@
 CACHE MANIFEST
-#ver:2018-1-18 14:57:33
+#ver:2018-1-18 15:09:49
 #plugin:4.9.0
 
 CACHE:
-../img/MaterialIcons-Regular.eot?e79bfd88537def476913f3ed52f4f4b3
-../img/MaterialIcons-Regular.ttf?a37b0c01c0baf1888ca812cc0508f6e2
-../js/entry.js?4396bd3ae85292da7465
-../js/vendor.js?d6cf8260ebba9a428b68
-../js/manifest.js?0ebfc4779bf13c2ba302
-../css/vendor.css?d6cf8260ebba9a428b68
-../css/entry.css?4396bd3ae85292da7465
+../js/entry.js?38c7420dc3fe46b9ea49
+../js/vendor.js?7d7f9bf203e473b73a34
+../js/manifest.js?4cfaaaef7e8118c08018
+../css/vendor.css?7d7f9bf203e473b73a34
+../css/entry.css?38c7420dc3fe46b9ea49
 ../
 
 NETWORK:

@@ -11,7 +11,6 @@ module.exports = function e(env) {
       vendor: [
         "./node_modules/materialize-css/dist/js/materialize",
         "./node_modules/materialize-css/dist/css/materialize.css",
-        "./node_modules/material-design-icons/iconfont/material-icons.css",
         "./app/js/offlineRuntimeInstall"
       ],
       entry: "./entry.js"
@@ -82,7 +81,7 @@ module.exports = function e(env) {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: "Kullaberg Citizen Science",
+        title: "Front-End Challenge",
         template: "./app/index.ejs"
       }),
       new ExtractTextPlugin("./css/[name].css?[chunkhash]"),

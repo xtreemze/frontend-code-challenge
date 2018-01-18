@@ -32,11 +32,11 @@ main {
 }
 
 .rentalStatus {
-  position: absolute;
+  position: absolute !important;
   margin-top: 1rem;
   top: 0;
   margin-left: 1rem;
-  font-size: 0.65rem;
-  padding: 0 0.65rem;
-  font-weight: 600;
+  font-size: 0.65rem !important;
+  padding: 0 0.65rem !important;
+  font-weight: 600 !important;
 }
