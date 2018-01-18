@@ -1,7 +1,13 @@
-class card {
+class Card {
   constructor(args) {
-    this.sourceImage =
-      args.advertisementAssets.advertisementThumbnails.inventory_m.url;
+    this.sourceImages = args.advertisementAssets;
+    for (const key in this.sourceImages) {
+      if (this.sourceImages[key].titlePicture) {
+        this.sourceImage = this.sourceImages[
+          key
+        ].advertisementThumbnails.inventory_m.url;
+      }
+    }
     this.cardTitle = args.title;
     this.priceRent = args.advertisementPrice.baseRent;
     this.priceSell = args.advertisementPrice.sellprice;
@@ -9,26 +15,28 @@ class card {
     this.rooms = args.realestateSummary.numberOfRooms;
     this.address = args.realestateSummary.address;
     this.space = args.realestateSummary.space;
+    if (this.priceRent !== undefined) {
+      this.price = this.priceRent;
+    } else {
+      this.price = this.priceSell;
+    }
     this.cardHtml = `<div class="row">
   <div class="col s12 m6">
     <div class="card">
       <div class="card-image">
         <img src=${this.sourceImage}>
-        <span class="card-title">${this.cardTitle}</span>
       </div>
-      <div class="card-content">
-        ${this.cardContent}
-      </div>
-      <div class="price">
-        ${this.priceRent} ${this.priceSell}
+      <div class="card-content row">
+      <span class="title col s12">${this.cardTitle}</span>
+
+      <div class="price col s6">${this.price}&#8364
       </div>
 
-      <div class="rooms">
-        ${this.rooms}
+      <div class="room col s6 right-align">
+        ${this.rooms} Rooms  |  ${this.space}m<sup>2</sup>
       </div>
 
-      <div class="space">
-        ${this.space}
+
       </div>
     </div>
   </div>
@@ -39,27 +47,9 @@ class card {
 }
 
 let listings = document.getElementById("listings");
-window.resultJson = {};
 
-// fetch(
-//   "https://api.mcmakler.de/v1/advertisements?callback=JSONP_CALLBACK",
-//   { mode: "no-cors" }
-// )
-//   .then(function(response) {
-//     return response.json();
-//   })
-//   .then(function(data) {
-//     resultJson = data.data;
-//   });
+window.resultJson = require("./advertisements.json");
 
-if (window.resultJson.length < 10) {
-  const imported = require("./advertisements.json");
-  imported.data.forEach(function(item) {
-    new card(item);
-  });
+for (let index = 0; index < 10; index++) {
+  new Card(window.resultJson.data[index]);
 }
-//  else {
-//   for (let i = 0; i < 10; i++) {
-//     new card(resultJson.data[i]);
-//   }
-// }
