@@ -560,7 +560,7 @@ class Card {
     }
     this.cardHtml = `<div class="">
   <div class="col s12 m6 l4">
-    <div class="card small">
+    <div class="card medium custom">
       <div class="card-image">
         <img src=${this.sourceImage}>
       </div>

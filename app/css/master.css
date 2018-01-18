@@ -40,3 +40,7 @@ main {
   padding: 0 0.65rem !important;
   font-weight: 600 !important;
 }
+
+.card.medium.custom {
+  height: 25rem !important;
+}
