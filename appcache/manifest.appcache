@@ -1,0 +1,14 @@
+CACHE MANIFEST
+#ver:2018-1-18 14:21:36
+#plugin:4.9.0
+
+CACHE:
+../js/entry.js?89dcee3f64acd0c6b04d
+../js/vendor.js?7d7f9bf203e473b73a34
+../js/manifest.js?25346d441c487919bdd5
+../css/vendor.css?7d7f9bf203e473b73a34
+../css/entry.css?89dcee3f64acd0c6b04d
+../
+
+NETWORK:
+*
