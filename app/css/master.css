@@ -1,0 +1,103 @@
+.transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+footer.page-footer {
+  bottom: 0;
+  position: fixed;
+  padding-top: 0;
+  height: 4rem;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.strong {
+  font-weight: 800;
+}
+
+main {
+  margin-bottom: 6rem !important;
+}
+
+.fadeOut {
+  animation: fadeOut 0.5s ease-out forwards;
+  opacity: 1;
+  pointer-events: none;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    pointer-events: none;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.hidden,
+.hidden div {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in forwards !important;
+  opacity: 0 !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+.card {
+  border-radius: 0.5rem !important;
+}
+
+.card .card-image img {
+  border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+.card .card-action {
+  background: none !important;
+}
+
+.footSlideUp {
+  animation: slideUp 0.8s ease-in-out forwards !important;
+}
+
+.noPadLeft {
+  padding-left: 0.5rem !important;
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -4rem;
+    opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  100% {
+    bottom: 0rem;
+    opacity: 1;
+  }
+}
+
+footer.page-footer {
+  bottom: -4rem;
+  opacity: 0;
+}
