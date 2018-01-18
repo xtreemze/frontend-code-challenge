@@ -39,7 +39,7 @@ class Card {
       <div class="card-image">
         <img src=${this.sourceImage}>
       </div>
-      <a class="rentalStatus waves-effect waves-light btn grey-text white">${
+      <a class="rentalStatus waves-effect waves-light btn grey-text text-lighten-1 white">${
         this.rental
       }</a>
       <div class="card-content row">
