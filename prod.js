@@ -128,7 +128,7 @@ module.exports = function e(env) {
         externals: [],
         caches: "all",
         responseStrategy: "network-first",
-        updateStrategy: "changed",
+        updateStrategy: "all",
         minify: "true",
         autoUpdate: 1000 * 60 * 60 * 2,
         ServiceWorker: {
