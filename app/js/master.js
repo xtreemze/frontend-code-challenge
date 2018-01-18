@@ -14,11 +14,24 @@ class Card {
     this.furnished = args.hasFurniture;
     this.rooms = args.realestateSummary.numberOfRooms;
     this.address = args.realestateSummary.address;
+    if (
+      args.userWishes.visibleAddress &&
+      args.realestateSummary.address
+    ) {
+      this.fullAddress =
+        args.realestateSummary.address.postalCode +
+        " " +
+        args.realestateSummary.address.street;
+    } else {
+      this.fullAddress = "";
+    }
     this.space = parseInt(args.realestateSummary.space, 10);
     if (this.priceRent !== undefined) {
       this.price = parseInt(this.priceRent, 10);
+      this.rental = "Mieten";
     } else {
       this.price = parseInt(this.priceSell, 10);
+      this.rental = "Kaufen";
     }
     this.cardHtml = `<div class="">
   <div class="col s12 m6 l4">
@@ -26,15 +39,18 @@ class Card {
       <div class="card-image">
         <img src=${this.sourceImage}>
       </div>
+      <a class="rentalStatus waves-effect waves-light btn grey-text white">${
+        this.rental
+      }</a>
       <div class="card-content row">
         <span class="title col s12">${this.cardTitle}</span>
+        <span class="description col s12">${this.fullAddress}</span>
         <div class="card-action">
           <div class="price col s2">${this.price}&#8364
           </div>
           
           <div class="room col s10 right-align">
-          ${this.rooms} Zimmer | ab ${this.space}m
-          <sup>2</sup>
+          ${this.rooms} Zimmer | ab ${this.space} m<sup>2</sup>
           </div>
           </div>
           

@@ -7,19 +7,35 @@ main {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.8rem;
-  color: rgb(94, 94, 94);
+  color: rgb(78, 78, 78);
+}
+
+.description {
+  font-weight: 600;
+  font-size: 0.65rem;
+  color: rgb(175, 175, 175);
+  margin-top: 0.4rem;
 }
 
 .price {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 0.8rem;
-  color: rgb(54, 54, 54);
+  color: rgb(68, 68, 68);
 }
 
 .room {
   font-weight: 500;
   font-size: 0.8rem;
   color: rgb(131, 131, 131);
+}
+
+.rentalStatus {
+  position: absolute;
+  margin-top: -8rem;
+  margin-left: 1rem;
+  font-size: 0.65rem;
+  padding: 0 0.65rem;
+  font-weight: 600;
 }
