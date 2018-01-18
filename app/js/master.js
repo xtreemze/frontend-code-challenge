@@ -14,29 +14,30 @@ class Card {
     this.furnished = args.hasFurniture;
     this.rooms = args.realestateSummary.numberOfRooms;
     this.address = args.realestateSummary.address;
-    this.space = args.realestateSummary.space;
+    this.space = parseInt(args.realestateSummary.space, 10);
     if (this.priceRent !== undefined) {
-      this.price = this.priceRent;
+      this.price = parseInt(this.priceRent, 10);
     } else {
-      this.price = this.priceSell;
+      this.price = parseInt(this.priceSell, 10);
     }
-    this.cardHtml = `<div class="row">
-  <div class="col s12 m6">
-    <div class="card">
+    this.cardHtml = `<div class="">
+  <div class="col s12 m6 l4">
+    <div class="card small">
       <div class="card-image">
         <img src=${this.sourceImage}>
       </div>
       <div class="card-content row">
-      <span class="title col s12">${this.cardTitle}</span>
-
-      <div class="price col s6">${this.price}&#8364
-      </div>
-
-      <div class="room col s6 right-align">
-        ${this.rooms} Rooms  |  ${this.space}m<sup>2</sup>
-      </div>
-
-
+        <span class="title col s12">${this.cardTitle}</span>
+        <div class="card-action">
+          <div class="price col s2">${this.price}&#8364
+          </div>
+          
+          <div class="room col s10 right-align">
+          ${this.rooms} Zimmer | ab ${this.space}m
+          <sup>2</sup>
+          </div>
+          </div>
+          
       </div>
     </div>
   </div>
