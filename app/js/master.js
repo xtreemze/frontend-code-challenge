@@ -3,7 +3,7 @@ window.addEventListener("load", function() {});
 let listings = document.getElementById("listings");
 let resultJson;
 
-let fetchedListings = fetch("https://api.mcmakler.de/v1/advertisements")
+let fetchedListings = fetch("https://api.mcmakler.de/v1/advertisements",  {'mode': 'no-cors'})
   .then(function(response) {
     return response.json();
   })
